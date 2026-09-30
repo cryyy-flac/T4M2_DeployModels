@@ -1,0 +1,32 @@
+.gradio-container{background:linear-gradient(180deg,#bfe9f5 0%,#f6e7a8 100%)!important;
+  font-family:'Trebuchet MS','Segoe UI',sans-serif!important}
+.panel{background:#fffdf2!important;border:3px solid #6b4423!important;
+  border-radius:16px!important;padding:14px!important}
+#btn-evaluar{background:#2e86c1!important;color:#fff!important;font-weight:700;
+  border:3px solid #1b4f72!important;border-radius:12px!important;font-size:1.1rem!important;
+  transition:transform .15s}
+#btn-evaluar:hover{transform:translateY(-2px) scale(1.02)}
+#btn-limpiar{border:3px solid #6b4423!important;border-radius:12px!important}
+
+/* --- componentes propios (funcionan aunque Tailwind no cargue) --- */
+.cabecera{position:relative;overflow:hidden;background:linear-gradient(90deg,#fde047,#fbbf24,#fde047);
+  border:4px solid #6b4423;border-radius:24px;padding:20px 26px;text-align:center;
+  box-shadow:0 6px 0 #6b4423}
+.cabecera h1{margin:0;color:#4a2e12;font-size:2.1rem}
+.cabecera p{margin:4px 0 0;color:#5c3b17}
+.burbuja{position:absolute;bottom:-20px;border-radius:50%;background:rgba(255,255,255,.55);
+  animation:subir 6s infinite ease-in}
+.tarjeta{border:4px solid;border-radius:20px;padding:18px 22px;background:#fffdf2;
+  animation:aparecer .5s ease-out}
+.barra{background:#ece4c8;border-radius:9999px;height:16px;overflow:hidden;flex:1}
+.relleno{height:100%;border-radius:9999px;animation:crecer .9s ease-out}
+.chip{display:inline-flex;gap:6px;align-items:center;background:#fef3c7;border:2px solid #d9b45b;
+  border-radius:9999px;padding:2px 12px;font-size:.85rem;color:#4a2e12}
+.aviso{margin-top:12px;padding:8px 12px;background:#fdebd0;border-left:5px solid #d68910;
+  border-radius:6px;color:#5c3b17;font-size:.9rem}
+.gif{text-align:center;margin-top:10px}
+.gif img{display:block;margin:0 auto;max-width:100%;width:340px;border:4px solid #6b4423;border-radius:16px;
+  box-shadow:0 4px 0 #6b4423}
+@keyframes subir{from{transform:translateY(0);opacity:.8}to{transform:translateY(-140px);opacity:0}}
+@keyframes crecer{from{width:0}}
+@keyframes aparecer{from{opacity:0;transform:translateY(10px)}}

@@ -1,0 +1,26 @@
+<div class="tarjeta" style="border-color:{{ nivel.color }}">
+  <div class="flex items-center gap-3 mb-1">
+    <span class="text-4xl">{{ nivel.emoji }}</span>
+    <div>
+      <div class="text-xs uppercase tracking-widest text-stone-500">Puntaje crediticio</div>
+      <h2 class="m-0 text-3xl font-extrabold" style="color:{{ nivel.color }}">{{ nivel.nombre }}</h2>
+    </div>
+  </div>
+  <p class="my-3 text-amber-950">{{ nivel.decision }}</p>
+
+  {% for b in barras %}
+  <div class="flex items-center gap-3 my-2 text-amber-950">
+    <span class="w-16 font-bold">{{ b.nivel.nombre }}</span>
+    <div class="barra"><div class="relleno" style="width:{{ b.pct }}%;background:{{ b.nivel.color }}"></div></div>
+    <span class="w-14 text-right tabular-nums">{{ b.pct }}%</span>
+  </div>
+  {% endfor %}
+
+  <div class="flex flex-wrap gap-2 mt-4">
+    {% for etiqueta, valor in resumen %}
+    <span class="chip"><b>{{ etiqueta }}:</b> {{ valor }}</span>
+    {% endfor %}
+  </div>
+
+  {% if aviso %}<div class="aviso"> {{ aviso }}</div>{% endif %}
+</div>
